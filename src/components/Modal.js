@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { DataContext } from "../context/DataContext";
+import "./Modal.css";
 
 const Modal = () => {
   const {
@@ -20,7 +21,7 @@ const Modal = () => {
 
   return (
     <>
-      <button onClick={() => setShowModal(true)}>Open Modal</button>
+      <button className="btn1" onClick={() => setShowModal(true)}>Open Modal</button>
       {showModal && (
         <div className="modal-wrapper">
           <div className="modal">
@@ -31,6 +32,9 @@ const Modal = () => {
                 onChange={handleSearch}
                 placeholder="Search available columns"
               />
+              <span onClick={() => setShowModal(false)} className="close">
+                &times;
+              </span>
             </div>
             <div className="modal-body">
               <div className="modal-columns">
@@ -44,24 +48,10 @@ const Modal = () => {
                     ))}
                   </ul>
                 </div>
-                <div className="selected-columns">
-                  <h3>Selected Columns</h3>
-                  <ul>
-                    {selectedData.map((d) => (
-                      <li key={d.id}>
-                        {d.name} - {d.username} - {d.phone}
-                        <button onClick={() => handleUnselectData(d.id)}>
-                          Unselect
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              
               </div>
             </div>
-            <div className="modal-footer">
-              <button onClick={() => setShowModal(false)}>Close</button>
-            </div>
+           
           </div>
         </div>
       )}

@@ -41,6 +41,7 @@ const App = () => {
         handleSearch
       }}
     >
+      
       <Table />
       <Modal />
     </DataContext.Provider>

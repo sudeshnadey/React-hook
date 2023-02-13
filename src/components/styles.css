@@ -1,0 +1,19 @@
+table{
+    width:800px;
+    margin-top: 50px;
+    height:auto;
+    border-collapse: collapse;
+}
+
+th{
+    width: 800px;
+    background-color: rgb(176, 169, 160);
+    border-bottom: 1px solid black;
+    border: 2px solid black;
+}
+td{
+    width: 800px;
+    background-color: rgb(225, 222, 218);
+    text-align: center;
+    border: 2px solid black;
+}

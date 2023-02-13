@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { DataContext } from "../context/DataContext";
-
+import "./styles.css";
 const Table = () => {
   const { data, selectedData, search, handleSelectData } = useContext(
     DataContext
@@ -18,7 +18,7 @@ const Table = () => {
           <th>Name</th>
           <th>Username</th>
           <th>Phone</th>
-          <th>Select</th>
+         
         </tr>
       </thead>
       <tbody>
@@ -28,14 +28,7 @@ const Table = () => {
             <td>{d.name}</td>
             <td>{d.username}</td>
             <td>{d.phone}</td>
-            <td>
-              <button
-                onClick={() => handleSelectData(d)}
-                disabled={selectedData.find((sd) => sd.id === d.id)}
-              >
-                Select
-              </button>
-            </td>
+            
           </tr>
         ))}
       </tbody>

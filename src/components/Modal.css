@@ -1,0 +1,92 @@
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+  }
+  
+  .modal {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ccc;
+    width: 80%;
+    max-width: 500px;
+    padding: 30px;
+    position: relative;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .modal-header input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+  }
+  
+  .modal-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modal-columns {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .available-columns {
+
+    width: 48%;
+  }
+  
+  .available-columns h3,
+  .selected-columns h3 {
+    margin-bottom: 10px;
+  }
+  
+  .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  .modal-footer button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .modal-wrapper.closemodal {
+    display: none;
+  }
+  
+  .modal-wrapper.openmodal {
+    display: flex;
+  }
+  .btn1{
+    margin-top: 50px;
+    background-color: rgb(15, 30, 30);
+    color: white;
+    width: 100px;
+    padding: 10px;
+    border-radius: 25px;
+}
